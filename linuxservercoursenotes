@@ -923,4 +923,7 @@ COPYING FILES OVER THE NETWORK:
 -------------------------------------------------------------------------------------------------
 
 MANAGING SERVICES WITH 'SYSTEMCTL':
--* enable
+-* enable / disable
+-* start / stop
+
+Command and Usage:
