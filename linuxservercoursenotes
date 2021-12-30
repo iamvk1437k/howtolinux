@@ -968,4 +968,34 @@ MAINTAINING SYSTEMD INIT:
 -* Setting Defaults
 
   Runlevel                  Boot target
-     0  
+     0                       PowerOff
+     1                       Rescue
+     3                       Multi user
+     5                       Graphical
+     6                       Reboot
+
+Command and Usage:
+ # systemctl get default
+ # systemctl set default multi-user-target
+ # systemctl get default
+ # systemctl isolate multi-user
+
+---------
+
+MANAGING SERVIVES WITH 'SYSV':
+-* /etc/init.d/
+-* service
+-* chkconfig
+
+Command and Usage:
+ # ls /etc/init.d/
+ # service sshd start
+ # service sshd status
+ # chkconfig --list sshd
+ # chkconfig sshd on
+ # chkconfig --list sshd
+ # chkconfig --level 3 sshd on
+ # chkconfig --list sshd
+
+--------------
+
