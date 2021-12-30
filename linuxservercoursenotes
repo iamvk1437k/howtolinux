@@ -927,3 +927,18 @@ MANAGING SERVICES WITH 'SYSTEMCTL':
 -* start / stop
 
 Command and Usage:
+ # systemctl status httpd
+ # systemctl enable httpd
+ # systemctl start httpd
+ # systemctl disable httpd
+ # systemctl status httpd
+
+--------
+
+MAINTAINING 'SYSV' RUNLEVELS:
+-* Various Modes
+-* Switching Modes
+-* Setting Defaults
+
+    Debian/Ubuntu                       CentOS/SUSE
+ 0 - Halt                              0 - Halt
