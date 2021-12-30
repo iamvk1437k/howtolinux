@@ -967,4 +967,5 @@ MAINTAINING SYSTEMD INIT:
 -* Switching Modes
 -* Setting Defaults
 
- Runlevel                  
+  Runlevel                  Boot target
+     0  
