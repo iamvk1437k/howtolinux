@@ -940,5 +940,26 @@ MAINTAINING 'SYSV' RUNLEVELS:
 -* Switching Modes
 -* Setting Defaults
 
-    Debian/Ubuntu                       CentOS/SUSE
- 0 - Halt                              0 - Halt
+                                     Sysv
+ Debian/Ubuntu                               CentOS/SUSE
+ 0 - Halt                                        0 - Halt 
+  1 - Single User Mode                 1 - Single User Mode
+ 2 - Full, Multiuser, GUI if             2 - Multi user, no net
+     Installed.
+ 3-5 - Nothing                               3 - Multiuser, with net
+ 6 - Reboot                                    4 - Not set
+                                                        5 - Multi user GUI
+				                                           6 - Reboot
+
+Command and Usage:
+ # runlevel
+ # telinit 3
+ # telinit 5
+ # runlevel
+ # vi /etc/inittab
+ # telinit 6
+
+-------------
+
+
+MAINTAINING SYSTEMD INIT:
