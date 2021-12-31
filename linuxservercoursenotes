@@ -915,6 +915,10 @@ Command and Usage:
 -------------------------------------------------------------------------------------------------
 
 COPYING FILES OVER THE NETWORK:
+-* ssh / scp
+-* rsync
+
+Command and Usage:
  # ssh centos
  # ls Desktop/
  # scp user@centos:/home/user1/Deaktop/cool_pic.jpg
@@ -933,7 +937,7 @@ Command and Usage:
  # systemctl disable httpd
  # systemctl status httpd
 
---------
+------------------------------------------------------------------------------------------------
 
 MAINTAINING 'SYSV' RUNLEVELS:
 -* Various Modes
