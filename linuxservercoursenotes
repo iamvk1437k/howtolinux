@@ -963,7 +963,7 @@ Command and Usage:
  # vi /etc/inittab
  # telinit 6
 
--------------
+--------------------------------------------------------------------------------------------------
 
 
 MAINTAINING SYSTEMD INIT:
@@ -984,7 +984,7 @@ Command and Usage:
  # systemctl get default
  # systemctl isolate multi-user
 
----------
+---------------------------------------------------------------------------------------------------
 
 MANAGING SERVIVES WITH 'SYSV':
 -* /etc/init.d/
@@ -1001,5 +1001,87 @@ Command and Usage:
  # chkconfig --level 3 sshd on
  # chkconfig --list sshd
 
---------------
 
+---------------------------------------------------------------------------------------------------
+
+MANAGING SERVICES WITH SYSTEMD:
+-* systemctl
+-* enable / disable
+-* start / stop / status
+
+Command and Usage:
+ # ls /etc/systemd/system
+ # locate sshd.service
+ # systemctl sshd.service
+ # systemctl status sshd
+ # systemctl disable sshd
+ # systemctl status sshd
+ # systemctl stop sshd
+
+----------------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------------------
+
+UNDERSTANING NETWORK SERVER ROLES:
+-* Local services 
+-* Centralized Services
+-* Planning
+
+
+            Centralized			                  Individual
+ 
+
+          ___________________________________________________
+         |                  |       |                        |
+         | DHCP             |       |                   SSH  |
+         |                  |       |                        |
+         | DNS              |->NTP<-|            Config      |
+         |                  |       |               Client   |
+         |   Config         |       |                        |
+         |    Management    |       |    Docker              |
+         |__________________|_______|________________________|
+
+              Server or Services ?
+                             
+           _____                ________               _________
+          | DNS |              |  DNS   |             |  _____  |
+          |_____|              |        |             | | DNS | |
+                               |        |             | |_____| |
+           ______              |        |             |  ______ |
+          | DHCP |             |  DHCP  |             | | DHCP ||
+          |______|             |        |             | |______||
+                               |        |             |  _____  |
+           _____               |        |             | | NTP | |
+          | NTP |              |  NTP   |             | |_____| |
+          |_____|              |        |             |  _____  |
+                               |        |             | | WEB | |
+           _____               |        |             | |_____| |
+          | WEB |              |  WEB   |             |_________|
+          |_____|              |________|
+          
+         Expansive               Messy                  Spamual
+                                                       Potential
+
+Understanding web servers and ssl:
+-* Processes
+-* Certificate Authority
+
+-------------------------------------------------------------------------------------------------
+
+UNDERSTANDING LOCAL NETWORK SERVER ROLES:
+-* file
+-* print
+-* mail
+-* proxy
+
+Service  |     Local                 |  Cloud
+----------------------------------------------------
+file     | samba -> Windows          |  Dropbox
+         | NFS   -> Linux, Mac, Win  |  OneDrive
+         | Netatalk -> Apple         |  GoogleDrive
+---------|---------------------------|--------------
+print    | caps -> win, Mac, Linux   |  GooglePrint
+         | Netatalk -> Apple         |  Air Print
+---------|---------------------------|---------------
+         
